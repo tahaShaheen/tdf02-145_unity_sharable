@@ -1,0 +1,236 @@
+\hypertarget{class_eyelid_controller}{}\doxysection{Eyelid\+Controller Class Reference}
+\label{class_eyelid_controller}\index{EyelidController@{EyelidController}}
+
+
+Controls the eyelids.  
+
+
+Inheritance diagram for Eyelid\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{dc/db8/class_eyelid_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eyelid_controller_a7f9ab7cba044ec8701c1eaf7bd8e49ec}{Forced\+Blink}} ()
+\begin{DoxyCompactList}\small\item\em Blinks if poked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_eyelid_controller_ac25824772267a4d6e5cf70ed67b069cd}{Go\+To\+Sleep}} ()
+\begin{DoxyCompactList}\small\item\em Triggers sleep animation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eyelid_controller_a495a5cef9001772e8127d92bd85afa53}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Called before the first frame update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_eyelid_controller_a8ca03fd47c7d116f0115b2b64721c820}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Called once per frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_eyelid_controller_abc4e74609aae9cc75c04d1217243d054}{Set\+Poke\+False}} ()
+\begin{DoxyCompactList}\small\item\em Sets \char`\"{}poke\char`\"{} to F\+A\+L\+SE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_eyelid_controller_a138cc16b86ceafeff1aed40c4dc9b0c9}{Set\+Go\+To\+Sleep\+False}} ()
+\begin{DoxyCompactList}\small\item\em Sets \char`\"{}poke\char`\"{} to F\+A\+L\+SE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_eyelid_controller_a7fc92db7a7f7060173562cfc3acb021a}{animator}}
+\begin{DoxyCompactList}\small\item\em Animator object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls the eyelids. 
+
+Handles eyelids and their animations 
+
+Definition at line 15 of file Eyelid\+Controller.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eyelid_controller_a7f9ab7cba044ec8701c1eaf7bd8e49ec}\label{class_eyelid_controller_a7f9ab7cba044ec8701c1eaf7bd8e49ec}} 
+\index{EyelidController@{EyelidController}!ForcedBlink@{ForcedBlink}}
+\index{ForcedBlink@{ForcedBlink}!EyelidController@{EyelidController}}
+\doxysubsubsection{\texorpdfstring{ForcedBlink()}{ForcedBlink()}}
+{\footnotesize\ttfamily void Eyelid\+Controller.\+Forced\+Blink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Blinks if poked. 
+
+\begin{DoxyItemize}
+\item The \char`\"{}eyelids\char`\"{} animator controller fed to the Animator instance attached to the Unity object \char`\"{}eyelids\char`\"{} has its intgers poke and go\+To\+Sleep to F\+A\+L\+SE when it starts \item This runs the \char`\"{}blinking\char`\"{} animation on a loop \item When a touch event is registered by the \mbox{\hyperlink{class_eye_poke_handler}{Eye\+Poke\+Handler}} class it calls \mbox{\hyperlink{class_eyelid_controller_a7f9ab7cba044ec8701c1eaf7bd8e49ec}{Forced\+Blink()}} \item The \char`\"{}poke\char`\"{} integer of the \char`\"{}eyelids\char`\"{} animator controller gets set to F\+A\+L\+SE. This makes sure a \char`\"{}blink\char`\"{} animation can happen. If one is already happening, it gets cancelled. \item The \char`\"{}blink\char`\"{} integer of the \char`\"{}eyelids\char`\"{} animator controller gets set to T\+R\+UE trigerring a \char`\"{}poke\char`\"{} animation. \item Sets up a time delayed call (in seconds) to \mbox{\hyperlink{class_eyelid_controller_abc4e74609aae9cc75c04d1217243d054}{Set\+Poke\+False()}} \end{DoxyItemize}
+
+
+Definition at line 55 of file Eyelid\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56     \{}
+\DoxyCodeLine{57         \mbox{\hyperlink{class_eyelid_controller_a7fc92db7a7f7060173562cfc3acb021a}{animator}}.SetBool(\textcolor{stringliteral}{"poke"}, \textcolor{keyword}{false});}
+\DoxyCodeLine{58         \mbox{\hyperlink{class_eyelid_controller_a7fc92db7a7f7060173562cfc3acb021a}{animator}}.SetBool(\textcolor{stringliteral}{"poke"}, \textcolor{keyword}{true});}
+\DoxyCodeLine{59         \textcolor{comment}{//because the forced\_poke animation has an exit time we just need to make sure the boolean goes back to false so the animation isn't triggered again //}}
+\DoxyCodeLine{60         Invoke(\textcolor{stringliteral}{"SetPokeFalse"}, 1);}
+\DoxyCodeLine{61     \}}
+
+\end{DoxyCode}
+
+
+References animator.
+
+
+
+Referenced by Eye\+Poke\+Handler.\+Update().
+
+\mbox{\Hypertarget{class_eyelid_controller_ac25824772267a4d6e5cf70ed67b069cd}\label{class_eyelid_controller_ac25824772267a4d6e5cf70ed67b069cd}} 
+\index{EyelidController@{EyelidController}!GoToSleep@{GoToSleep}}
+\index{GoToSleep@{GoToSleep}!EyelidController@{EyelidController}}
+\doxysubsubsection{\texorpdfstring{GoToSleep()}{GoToSleep()}}
+{\footnotesize\ttfamily void Eyelid\+Controller.\+Go\+To\+Sleep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Triggers sleep animation. 
+
+\begin{DoxyItemize}
+\item Called from J\+A\+VA code. \item Triggers sleep animation by setting \char`\"{}go\+To\+Sleep\char`\"{} integer of the \char`\"{}eyelids\char`\"{} animator controller to T\+R\+UE \item Sets up a time delayed call (in seconds) to \mbox{\hyperlink{class_eyelid_controller_a138cc16b86ceafeff1aed40c4dc9b0c9}{Set\+Go\+To\+Sleep\+False()}} \end{DoxyItemize}
+
+
+Definition at line 79 of file Eyelid\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80     \{}
+\DoxyCodeLine{81         \textcolor{comment}{//This function is called by the Andoird code}}
+\DoxyCodeLine{82         \mbox{\hyperlink{class_eyelid_controller_a7fc92db7a7f7060173562cfc3acb021a}{animator}}.SetBool(\textcolor{stringliteral}{"goToSleep"}, \textcolor{keyword}{true});}
+\DoxyCodeLine{83         Invoke(\textcolor{stringliteral}{"SetGoToSleepFalse"}, 5);}
+\DoxyCodeLine{84     \}}
+
+\end{DoxyCode}
+
+
+References animator.
+
+\mbox{\Hypertarget{class_eyelid_controller_a138cc16b86ceafeff1aed40c4dc9b0c9}\label{class_eyelid_controller_a138cc16b86ceafeff1aed40c4dc9b0c9}} 
+\index{EyelidController@{EyelidController}!SetGoToSleepFalse@{SetGoToSleepFalse}}
+\index{SetGoToSleepFalse@{SetGoToSleepFalse}!EyelidController@{EyelidController}}
+\doxysubsubsection{\texorpdfstring{SetGoToSleepFalse()}{SetGoToSleepFalse()}}
+{\footnotesize\ttfamily void Eyelid\+Controller.\+Set\+Go\+To\+Sleep\+False (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets \char`\"{}poke\char`\"{} to F\+A\+L\+SE. 
+
+Called by \mbox{\hyperlink{class_eyelid_controller_ac25824772267a4d6e5cf70ed67b069cd}{Go\+To\+Sleep()}}. Sets \char`\"{}go\+To\+Sleep\char`\"{} integer of \char`\"{}eyelids\char`\"{} animator controller to F\+A\+L\+SE 
+
+Definition at line 90 of file Eyelid\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91     \{}
+\DoxyCodeLine{92         \mbox{\hyperlink{class_eyelid_controller_a7fc92db7a7f7060173562cfc3acb021a}{animator}}.SetBool(\textcolor{stringliteral}{"goToSleep"}, \textcolor{keyword}{false});}
+\DoxyCodeLine{93     \}}
+
+\end{DoxyCode}
+
+
+References animator.
+
+\mbox{\Hypertarget{class_eyelid_controller_abc4e74609aae9cc75c04d1217243d054}\label{class_eyelid_controller_abc4e74609aae9cc75c04d1217243d054}} 
+\index{EyelidController@{EyelidController}!SetPokeFalse@{SetPokeFalse}}
+\index{SetPokeFalse@{SetPokeFalse}!EyelidController@{EyelidController}}
+\doxysubsubsection{\texorpdfstring{SetPokeFalse()}{SetPokeFalse()}}
+{\footnotesize\ttfamily void Eyelid\+Controller.\+Set\+Poke\+False (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets \char`\"{}poke\char`\"{} to F\+A\+L\+SE. 
+
+Called by \mbox{\hyperlink{class_eyelid_controller_a7f9ab7cba044ec8701c1eaf7bd8e49ec}{Forced\+Blink()}}. Sets \char`\"{}poke\char`\"{} integer of \char`\"{}eyelids\char`\"{} animator controller to F\+A\+L\+SE 
+
+Definition at line 67 of file Eyelid\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68     \{}
+\DoxyCodeLine{69         \mbox{\hyperlink{class_eyelid_controller_a7fc92db7a7f7060173562cfc3acb021a}{animator}}.SetBool(\textcolor{stringliteral}{"poke"}, \textcolor{keyword}{false});}
+\DoxyCodeLine{70     \}}
+
+\end{DoxyCode}
+
+
+References animator.
+
+\mbox{\Hypertarget{class_eyelid_controller_a495a5cef9001772e8127d92bd85afa53}\label{class_eyelid_controller_a495a5cef9001772e8127d92bd85afa53}} 
+\index{EyelidController@{EyelidController}!Start@{Start}}
+\index{Start@{Start}!EyelidController@{EyelidController}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Eyelid\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called before the first frame update. 
+
+\begin{DoxyItemize}
+\item Runs once \item Fetches a reference to the Animator instance attached to the Unity object \char`\"{}eyelids\char`\"{} in the Unity environment \end{DoxyItemize}
+
+
+Definition at line 30 of file Eyelid\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32         \mbox{\hyperlink{class_eyelid_controller_a7fc92db7a7f7060173562cfc3acb021a}{animator}} = GetComponent<Animator>();}
+\DoxyCodeLine{33     \}}
+
+\end{DoxyCode}
+
+
+References animator.
+
+\mbox{\Hypertarget{class_eyelid_controller_a8ca03fd47c7d116f0115b2b64721c820}\label{class_eyelid_controller_a8ca03fd47c7d116f0115b2b64721c820}} 
+\index{EyelidController@{EyelidController}!Update@{Update}}
+\index{Update@{Update}!EyelidController@{EyelidController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Eyelid\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called once per frame. 
+
+\begin{DoxyItemize}
+\item Loops \item Is empty here \end{DoxyItemize}
+
+
+Definition at line 41 of file Eyelid\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eyelid_controller_a7fc92db7a7f7060173562cfc3acb021a}\label{class_eyelid_controller_a7fc92db7a7f7060173562cfc3acb021a}} 
+\index{EyelidController@{EyelidController}!animator@{animator}}
+\index{animator@{animator}!EyelidController@{EyelidController}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily Animator Eyelid\+Controller.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Animator object. 
+
+Instance of the Animator class. Holds an animator controller which in turn holds animations and handles the switches between them. 
+
+Definition at line 22 of file Eyelid\+Controller.\+cs.
+
+
+
+Referenced by Forced\+Blink(), Go\+To\+Sleep(), Set\+Go\+To\+Sleep\+False(), Set\+Poke\+False(), and Start().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_eyelid_controller_8cs}{Eyelid\+Controller.\+cs}}\end{DoxyCompactItemize}

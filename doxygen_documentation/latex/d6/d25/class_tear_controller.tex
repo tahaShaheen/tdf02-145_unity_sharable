@@ -1,0 +1,202 @@
+\hypertarget{class_tear_controller}{}\doxysection{Tear\+Controller Class Reference}
+\label{class_tear_controller}\index{TearController@{TearController}}
+
+
+Controls the tear.  
+
+
+Inheritance diagram for Tear\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d6/d25/class_tear_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tear_controller_a03f6d66a5b0ea53a51a95a0e99b4dbf9}{Set\+Emotion}} (string emotion)
+\begin{DoxyCompactList}\small\item\em Sets tear state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tear_controller_a87e1fae184aa76b303326a4ccb2d352d}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Called before the first frame update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tear_controller_ab66a8048ee87b440941b2e41ae2c1dab}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_tear_controller_a351a55c9cac3e3872425ab76578d9472}{animator}}
+\begin{DoxyCompactList}\small\item\em Animator object. \end{DoxyCompactList}\item 
+readonly int \mbox{\hyperlink{class_tear_controller_ab81af9d9629d5f3f9c1d69a26a584160}{S\+AD}} = 1
+\begin{DoxyCompactList}\small\item\em Universal integer for S\+AD. \end{DoxyCompactList}\item 
+readonly int \mbox{\hyperlink{class_tear_controller_a26a075ed6c36caa62b359791dda44c67}{N\+O\+T\+\_\+\+S\+AD}} = 0
+\begin{DoxyCompactList}\small\item\em Universal integer for NO E\+X\+P\+R\+E\+S\+S\+I\+ON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls the tear. 
+
+Handles the tear and its animation 
+
+Definition at line 15 of file Tear\+Controller.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tear_controller_a03f6d66a5b0ea53a51a95a0e99b4dbf9}\label{class_tear_controller_a03f6d66a5b0ea53a51a95a0e99b4dbf9}} 
+\index{TearController@{TearController}!SetEmotion@{SetEmotion}}
+\index{SetEmotion@{SetEmotion}!TearController@{TearController}}
+\doxysubsubsection{\texorpdfstring{SetEmotion()}{SetEmotion()}}
+{\footnotesize\ttfamily void Tear\+Controller.\+Set\+Emotion (\begin{DoxyParamCaption}\item[{string}]{emotion }\end{DoxyParamCaption})}
+
+
+
+Sets tear state. 
+
+\begin{DoxyItemize}
+\item Called from J\+A\+VA code \item Receives an emotion String \item Runs a switch case that updates the animator\textquotesingle{}s integer named \char`\"{}emotion\char`\"{} \item That triggers an animation 
+\begin{DoxyParams}{Parameters}
+{\em emotion} & Possible values\+: H\+A\+P\+PY, S\+AD, A\+N\+G\+RY, S\+U\+R\+P\+R\+I\+S\+ED, I\+D\+LE, S\+P\+E\+A\+K\+I\+NG \\
+\hline
+\end{DoxyParams}
+\end{DoxyItemize}
+
+
+Definition at line 63 of file Tear\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                           \{}
+\DoxyCodeLine{64         \textcolor{keywordflow}{switch} (emotion)\{}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"SAD"}:}
+\DoxyCodeLine{67                 \mbox{\hyperlink{class_tear_controller_a351a55c9cac3e3872425ab76578d9472}{animator}}.SetInteger(\textcolor{stringliteral}{"emotion"}, \mbox{\hyperlink{class_tear_controller_ab81af9d9629d5f3f9c1d69a26a584160}{SAD}});}
+\DoxyCodeLine{68                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{69             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"SPEAKING"}:}
+\DoxyCodeLine{70                 \textcolor{comment}{// SPEAKING doesn't change the tear state //}}
+\DoxyCodeLine{71                 \textcolor{comment}{// This allows for teary speaking //}}
+\DoxyCodeLine{72                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{73             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{74                 \mbox{\hyperlink{class_tear_controller_a351a55c9cac3e3872425ab76578d9472}{animator}}.SetInteger(\textcolor{stringliteral}{"emotion"}, \mbox{\hyperlink{class_tear_controller_a26a075ed6c36caa62b359791dda44c67}{NOT\_SAD}});}
+\DoxyCodeLine{75                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{76         \}}
+\DoxyCodeLine{77     \}}
+
+\end{DoxyCode}
+
+
+References animator, N\+O\+T\+\_\+\+S\+AD, and S\+AD.
+
+\mbox{\Hypertarget{class_tear_controller_a87e1fae184aa76b303326a4ccb2d352d}\label{class_tear_controller_a87e1fae184aa76b303326a4ccb2d352d}} 
+\index{TearController@{TearController}!Start@{Start}}
+\index{Start@{Start}!TearController@{TearController}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Tear\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called before the first frame update. 
+
+\begin{DoxyItemize}
+\item Runs once \item Fetches a reference to the Animator instance attached to the Unity object \char`\"{}tear\char`\"{} in the Unity environment \end{DoxyItemize}
+
+
+Definition at line 40 of file Tear\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                 \{}
+\DoxyCodeLine{41         \mbox{\hyperlink{class_tear_controller_a351a55c9cac3e3872425ab76578d9472}{animator}} = GetComponent<Animator>();}
+\DoxyCodeLine{42     \}}
+
+\end{DoxyCode}
+
+
+References animator.
+
+\mbox{\Hypertarget{class_tear_controller_ab66a8048ee87b440941b2e41ae2c1dab}\label{class_tear_controller_ab66a8048ee87b440941b2e41ae2c1dab}} 
+\index{TearController@{TearController}!Update@{Update}}
+\index{Update@{Update}!TearController@{TearController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Tear\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called once per frame. 
+
+\begin{DoxyItemize}
+\item Loops \item Is empty here \end{DoxyItemize}
+
+
+Definition at line 50 of file Tear\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                  \{}
+\DoxyCodeLine{51         }
+\DoxyCodeLine{52     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_tear_controller_a351a55c9cac3e3872425ab76578d9472}\label{class_tear_controller_a351a55c9cac3e3872425ab76578d9472}} 
+\index{TearController@{TearController}!animator@{animator}}
+\index{animator@{animator}!TearController@{TearController}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily Animator Tear\+Controller.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Animator object. 
+
+Instance of the Animator class. Holds an animator controller which in turn holds animations and handles the switches between them. 
+
+Definition at line 21 of file Tear\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion(), and Start().
+
+\mbox{\Hypertarget{class_tear_controller_a26a075ed6c36caa62b359791dda44c67}\label{class_tear_controller_a26a075ed6c36caa62b359791dda44c67}} 
+\index{TearController@{TearController}!NOT\_SAD@{NOT\_SAD}}
+\index{NOT\_SAD@{NOT\_SAD}!TearController@{TearController}}
+\doxysubsubsection{\texorpdfstring{NOT\_SAD}{NOT\_SAD}}
+{\footnotesize\ttfamily Tear\+Controller.\+N\+O\+T\+\_\+\+S\+AD = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Universal integer for NO E\+X\+P\+R\+E\+S\+S\+I\+ON. 
+
+Triggers the tear to turn off 
+
+Definition at line 32 of file Tear\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion().
+
+\mbox{\Hypertarget{class_tear_controller_ab81af9d9629d5f3f9c1d69a26a584160}\label{class_tear_controller_ab81af9d9629d5f3f9c1d69a26a584160}} 
+\index{TearController@{TearController}!SAD@{SAD}}
+\index{SAD@{SAD}!TearController@{TearController}}
+\doxysubsubsection{\texorpdfstring{SAD}{SAD}}
+{\footnotesize\ttfamily Tear\+Controller.\+S\+AD = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Universal integer for S\+AD. 
+
+Triggers objects and animations tied to the S\+AD look 
+
+Definition at line 32 of file Tear\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_tear_controller_8cs}{Tear\+Controller.\+cs}}\end{DoxyCompactItemize}

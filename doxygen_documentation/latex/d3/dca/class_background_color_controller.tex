@@ -1,0 +1,276 @@
+\hypertarget{class_background_color_controller}{}\doxysection{Background\+Color\+Controller Class Reference}
+\label{class_background_color_controller}\index{BackgroundColorController@{BackgroundColorController}}
+
+
+Controls the background color.  
+
+
+Inheritance diagram for Background\+Color\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d3/dca/class_background_color_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_background_color_controller_aa0f2b70160b6a39fa7b6252f3f8018fa}{Change\+Background\+Color}} (string hex\+Color)
+\begin{DoxyCompactList}\small\item\em Changes value of end\+Color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Color32 \mbox{\hyperlink{class_background_color_controller_a661c761c0e6e872d6f9ad5311160ada6}{start\+Color}}
+\begin{DoxyCompactList}\small\item\em Color before transition. \end{DoxyCompactList}\item 
+Color32 \mbox{\hyperlink{class_background_color_controller_aca2f7c545eb722eb96b13fcdcbeefc97}{end\+Color}}
+\begin{DoxyCompactList}\small\item\em Color after transition. \end{DoxyCompactList}\item 
+Color32 \mbox{\hyperlink{class_background_color_controller_a015f3e11ed521a2bc0474a6fb5c345ae}{default\+Color}} = new Color32(255, 180, 0, 255)
+\begin{DoxyCompactList}\small\item\em Contains the default orange color. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_background_color_controller_a606fabc1df0896ec60e2a12b30ee72ed}{speed}} = 1.\+0F
+\begin{DoxyCompactList}\small\item\em Speed with which the color transition occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_background_color_controller_ac8f402604ddd8c754a3e69bc4f54b63f}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Called before the first frame update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_background_color_controller_ad354cbe431c185fdac230c0bb0e1424b}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Camera \mbox{\hyperlink{class_background_color_controller_a40a423446b3ef2e53eb24e8180ad7f98}{cam}}
+\begin{DoxyCompactList}\small\item\em Camera object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_background_color_controller_af965ad1f2eef3f3959ea25097492096b}{start\+Time}}
+\begin{DoxyCompactList}\small\item\em Stores time at the start of transition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls the background color. 
+
+Handles facial color and deals with the transition from one to the other 
+
+Definition at line 16 of file Background\+Color\+Controller.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_background_color_controller_aa0f2b70160b6a39fa7b6252f3f8018fa}\label{class_background_color_controller_aa0f2b70160b6a39fa7b6252f3f8018fa}} 
+\index{BackgroundColorController@{BackgroundColorController}!ChangeBackgroundColor@{ChangeBackgroundColor}}
+\index{ChangeBackgroundColor@{ChangeBackgroundColor}!BackgroundColorController@{BackgroundColorController}}
+\doxysubsubsection{\texorpdfstring{ChangeBackgroundColor()}{ChangeBackgroundColor()}}
+{\footnotesize\ttfamily void Background\+Color\+Controller.\+Change\+Background\+Color (\begin{DoxyParamCaption}\item[{string}]{hex\+Color }\end{DoxyParamCaption})}
+
+
+
+Changes value of end\+Color. 
+
+\begin{DoxyItemize}
+\item Called from J\+A\+VA code \item Receives hexcode of the color as a string \item Breaks it into individual R\+GB values and converts values into integers \item Updates the value of end\+Color. Opacity is max (255). 
+\begin{DoxyParams}{Parameters}
+{\em hex\+Color} & Color in hexadecimal \\
+\hline
+\end{DoxyParams}
+\end{DoxyItemize}
+
+
+Definition at line 92 of file Background\+Color\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{93     \{}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95         \textcolor{comment}{// fetches current color //}}
+\DoxyCodeLine{96         \mbox{\hyperlink{class_background_color_controller_a661c761c0e6e872d6f9ad5311160ada6}{startColor}} = Camera.main.backgroundColor;}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98         \textcolor{comment}{// converting from hexadecimal color value to RGB //}}
+\DoxyCodeLine{99         \textcolor{keywordtype}{int} red, green, blue;}
+\DoxyCodeLine{100         red = \textcolor{keywordtype}{int}.Parse(hexColor.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);}
+\DoxyCodeLine{101         green = \textcolor{keywordtype}{int}.Parse(hexColor.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);}
+\DoxyCodeLine{102         blue = \textcolor{keywordtype}{int}.Parse(hexColor.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104         \mbox{\hyperlink{class_background_color_controller_aca2f7c545eb722eb96b13fcdcbeefc97}{endColor}} = \textcolor{keyword}{new} Color32((\textcolor{keywordtype}{byte})red, (\textcolor{keywordtype}{byte})green, (\textcolor{keywordtype}{byte})blue, 255);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106         \textcolor{comment}{// reseting start time //}}
+\DoxyCodeLine{107         \mbox{\hyperlink{class_background_color_controller_af965ad1f2eef3f3959ea25097492096b}{startTime}} = Time.time;}
+\DoxyCodeLine{108     \}}
+
+\end{DoxyCode}
+
+
+References end\+Color, start\+Color, and start\+Time.
+
+\mbox{\Hypertarget{class_background_color_controller_ac8f402604ddd8c754a3e69bc4f54b63f}\label{class_background_color_controller_ac8f402604ddd8c754a3e69bc4f54b63f}} 
+\index{BackgroundColorController@{BackgroundColorController}!Start@{Start}}
+\index{Start@{Start}!BackgroundColorController@{BackgroundColorController}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Background\+Color\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called before the first frame update. 
+
+\begin{DoxyItemize}
+\item Runs once \item Fetches a reference to Camera instance attached to Unity object \char`\"{}\+Main Camera\char`\"{} in the Unity environment \item Saves current time \item Puts default\+Color into start\+Color and end\+Color so the first transition is not noticeable \end{DoxyItemize}
+
+
+Definition at line 60 of file Background\+Color\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61     \{}
+\DoxyCodeLine{62         \mbox{\hyperlink{class_background_color_controller_a40a423446b3ef2e53eb24e8180ad7f98}{cam}} = GetComponent<Camera>();}
+\DoxyCodeLine{63         \mbox{\hyperlink{class_background_color_controller_a40a423446b3ef2e53eb24e8180ad7f98}{cam}}.clearFlags = CameraClearFlags.SolidColor;}
+\DoxyCodeLine{64         \mbox{\hyperlink{class_background_color_controller_af965ad1f2eef3f3959ea25097492096b}{startTime}} = Time.time;}
+\DoxyCodeLine{65         \mbox{\hyperlink{class_background_color_controller_a661c761c0e6e872d6f9ad5311160ada6}{startColor}} = \mbox{\hyperlink{class_background_color_controller_a015f3e11ed521a2bc0474a6fb5c345ae}{defaultColor}};}
+\DoxyCodeLine{66         \mbox{\hyperlink{class_background_color_controller_aca2f7c545eb722eb96b13fcdcbeefc97}{endColor}} = \mbox{\hyperlink{class_background_color_controller_a015f3e11ed521a2bc0474a6fb5c345ae}{defaultColor}};}
+\DoxyCodeLine{67     \}}
+
+\end{DoxyCode}
+
+
+References cam, default\+Color, end\+Color, start\+Color, and start\+Time.
+
+\mbox{\Hypertarget{class_background_color_controller_ad354cbe431c185fdac230c0bb0e1424b}\label{class_background_color_controller_ad354cbe431c185fdac230c0bb0e1424b}} 
+\index{BackgroundColorController@{BackgroundColorController}!Update@{Update}}
+\index{Update@{Update}!BackgroundColorController@{BackgroundColorController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Background\+Color\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called once per frame. 
+
+\begin{DoxyItemize}
+\item Loops \item Compares time and multiplies it by speed constant. The value of the float t only grows. \item Lerps from start\+Color to end\+Color ad infinitum \end{DoxyItemize}
+
+
+Definition at line 76 of file Background\+Color\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77     \{}
+\DoxyCodeLine{78         \textcolor{comment}{// changes from first color to second color through a gradient //}}
+\DoxyCodeLine{79         \textcolor{keywordtype}{float} t = (Time.time -\/ \mbox{\hyperlink{class_background_color_controller_af965ad1f2eef3f3959ea25097492096b}{startTime}}) * \mbox{\hyperlink{class_background_color_controller_a606fabc1df0896ec60e2a12b30ee72ed}{speed}};}
+\DoxyCodeLine{80         GetComponent<Camera>().backgroundColor = Color32.Lerp(\mbox{\hyperlink{class_background_color_controller_a661c761c0e6e872d6f9ad5311160ada6}{startColor}}, \mbox{\hyperlink{class_background_color_controller_aca2f7c545eb722eb96b13fcdcbeefc97}{endColor}}, t);}
+\DoxyCodeLine{81     \}}
+
+\end{DoxyCode}
+
+
+References end\+Color, speed, start\+Color, and start\+Time.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_background_color_controller_a40a423446b3ef2e53eb24e8180ad7f98}\label{class_background_color_controller_a40a423446b3ef2e53eb24e8180ad7f98}} 
+\index{BackgroundColorController@{BackgroundColorController}!cam@{cam}}
+\index{cam@{cam}!BackgroundColorController@{BackgroundColorController}}
+\doxysubsubsection{\texorpdfstring{cam}{cam}}
+{\footnotesize\ttfamily Camera Background\+Color\+Controller.\+cam\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Camera object. 
+
+Instance of the Camera class through which we view the \char`\"{}scene\char`\"{} 
+
+Definition at line 23 of file Background\+Color\+Controller.\+cs.
+
+
+
+Referenced by Start().
+
+\mbox{\Hypertarget{class_background_color_controller_a015f3e11ed521a2bc0474a6fb5c345ae}\label{class_background_color_controller_a015f3e11ed521a2bc0474a6fb5c345ae}} 
+\index{BackgroundColorController@{BackgroundColorController}!defaultColor@{defaultColor}}
+\index{defaultColor@{defaultColor}!BackgroundColorController@{BackgroundColorController}}
+\doxysubsubsection{\texorpdfstring{defaultColor}{defaultColor}}
+{\footnotesize\ttfamily Color32 Background\+Color\+Controller.\+default\+Color = new Color32(255, 180, 0, 255)}
+
+
+
+Contains the default orange color. 
+
+
+
+Definition at line 40 of file Background\+Color\+Controller.\+cs.
+
+
+
+Referenced by Start().
+
+\mbox{\Hypertarget{class_background_color_controller_aca2f7c545eb722eb96b13fcdcbeefc97}\label{class_background_color_controller_aca2f7c545eb722eb96b13fcdcbeefc97}} 
+\index{BackgroundColorController@{BackgroundColorController}!endColor@{endColor}}
+\index{endColor@{endColor}!BackgroundColorController@{BackgroundColorController}}
+\doxysubsubsection{\texorpdfstring{endColor}{endColor}}
+{\footnotesize\ttfamily Color32 Background\+Color\+Controller.\+end\+Color}
+
+
+
+Color after transition. 
+
+Contains the color the background must be after transition 
+
+Definition at line 35 of file Background\+Color\+Controller.\+cs.
+
+
+
+Referenced by Change\+Background\+Color(), Start(), and Update().
+
+\mbox{\Hypertarget{class_background_color_controller_a606fabc1df0896ec60e2a12b30ee72ed}\label{class_background_color_controller_a606fabc1df0896ec60e2a12b30ee72ed}} 
+\index{BackgroundColorController@{BackgroundColorController}!speed@{speed}}
+\index{speed@{speed}!BackgroundColorController@{BackgroundColorController}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Background\+Color\+Controller.\+speed = 1.\+0F}
+
+
+
+Speed with which the color transition occurs. 
+
+
+
+Definition at line 45 of file Background\+Color\+Controller.\+cs.
+
+
+
+Referenced by Update().
+
+\mbox{\Hypertarget{class_background_color_controller_a661c761c0e6e872d6f9ad5311160ada6}\label{class_background_color_controller_a661c761c0e6e872d6f9ad5311160ada6}} 
+\index{BackgroundColorController@{BackgroundColorController}!startColor@{startColor}}
+\index{startColor@{startColor}!BackgroundColorController@{BackgroundColorController}}
+\doxysubsubsection{\texorpdfstring{startColor}{startColor}}
+{\footnotesize\ttfamily Color32 Background\+Color\+Controller.\+start\+Color}
+
+
+
+Color before transition. 
+
+Contains the color the background must be before transition 
+
+Definition at line 29 of file Background\+Color\+Controller.\+cs.
+
+
+
+Referenced by Change\+Background\+Color(), Start(), and Update().
+
+\mbox{\Hypertarget{class_background_color_controller_af965ad1f2eef3f3959ea25097492096b}\label{class_background_color_controller_af965ad1f2eef3f3959ea25097492096b}} 
+\index{BackgroundColorController@{BackgroundColorController}!startTime@{startTime}}
+\index{startTime@{startTime}!BackgroundColorController@{BackgroundColorController}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily float Background\+Color\+Controller.\+start\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores time at the start of transition. 
+
+
+
+Definition at line 50 of file Background\+Color\+Controller.\+cs.
+
+
+
+Referenced by Change\+Background\+Color(), Start(), and Update().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_background_color_controller_8cs}{Background\+Color\+Controller.\+cs}}\end{DoxyCompactItemize}

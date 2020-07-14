@@ -1,0 +1,229 @@
+\hypertarget{class_eyebrow_controller}{}\doxysection{Eyebrow\+Controller Class Reference}
+\label{class_eyebrow_controller}\index{EyebrowController@{EyebrowController}}
+
+
+Controls the eyebrows.  
+
+
+Inheritance diagram for Eyebrow\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d7/d83/class_eyebrow_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eyebrow_controller_ac671edb303128859df3b5a068c8d765c}{Set\+Emotion}} (string emotion)
+\begin{DoxyCompactList}\small\item\em Sets eyebrow emotion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eyebrow_controller_a91d51b3c5eef7407bd64957649f150c0}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Called before the first frame update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_eyebrow_controller_a8aca91301fa75ee49b20cfdbe12b82c5}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_eyebrow_controller_ae7a79ab56477aa98a05a539659df0460}{animator}}
+\begin{DoxyCompactList}\small\item\em Animator object. \end{DoxyCompactList}\item 
+readonly int \mbox{\hyperlink{class_eyebrow_controller_a8351a5f4d220688dfee31bbc4b5129e8}{N\+O\+\_\+\+E\+Y\+E\+B\+R\+O\+WS}} = 0
+\begin{DoxyCompactList}\small\item\em Universal integer for NO E\+X\+P\+R\+E\+S\+S\+I\+ON. \end{DoxyCompactList}\item 
+readonly int \mbox{\hyperlink{class_eyebrow_controller_acad1a5a0c7886a14f365909dc3c1cd43}{A\+N\+G\+RY}} = 3
+\begin{DoxyCompactList}\small\item\em Universal integer for A\+N\+G\+RY. \end{DoxyCompactList}\item 
+readonly int \mbox{\hyperlink{class_eyebrow_controller_abe7c2b0843232f9dde435d234806c95b}{S\+U\+R\+P\+R\+I\+S\+ED}} = 2
+\begin{DoxyCompactList}\small\item\em Universal integer for S\+U\+R\+P\+R\+I\+S\+ED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls the eyebrows. 
+
+Handles eyebrows and their animations 
+
+Definition at line 15 of file Eyebrow\+Controller.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eyebrow_controller_ac671edb303128859df3b5a068c8d765c}\label{class_eyebrow_controller_ac671edb303128859df3b5a068c8d765c}} 
+\index{EyebrowController@{EyebrowController}!SetEmotion@{SetEmotion}}
+\index{SetEmotion@{SetEmotion}!EyebrowController@{EyebrowController}}
+\doxysubsubsection{\texorpdfstring{SetEmotion()}{SetEmotion()}}
+{\footnotesize\ttfamily void Eyebrow\+Controller.\+Set\+Emotion (\begin{DoxyParamCaption}\item[{string}]{emotion }\end{DoxyParamCaption})}
+
+
+
+Sets eyebrow emotion. 
+
+\begin{DoxyItemize}
+\item Called from J\+A\+VA code \item Receives an emotion String \item Runs a switch case that updates the animator\textquotesingle{}s integer named \char`\"{}emotion\char`\"{} \item That triggers an animation 
+\begin{DoxyParams}{Parameters}
+{\em emotion} & Possible values\+: H\+A\+P\+PY, S\+AD, A\+N\+G\+RY, S\+U\+R\+P\+R\+I\+S\+ED, I\+D\+LE, S\+P\+E\+A\+K\+I\+NG \\
+\hline
+\end{DoxyParams}
+\end{DoxyItemize}
+
+
+Definition at line 70 of file Eyebrow\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71     \{}
+\DoxyCodeLine{72         \textcolor{keywordflow}{switch} (emotion)}
+\DoxyCodeLine{73         \{}
+\DoxyCodeLine{74             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"ANGRY"}:}
+\DoxyCodeLine{75                 \mbox{\hyperlink{class_eyebrow_controller_ae7a79ab56477aa98a05a539659df0460}{animator}}.SetInteger(\textcolor{stringliteral}{"emotion"}, \mbox{\hyperlink{class_eyebrow_controller_acad1a5a0c7886a14f365909dc3c1cd43}{ANGRY}});}
+\DoxyCodeLine{76                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{77             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"SURPRISED"}:}
+\DoxyCodeLine{78                 \mbox{\hyperlink{class_eyebrow_controller_ae7a79ab56477aa98a05a539659df0460}{animator}}.SetInteger(\textcolor{stringliteral}{"emotion"}, \mbox{\hyperlink{class_eyebrow_controller_abe7c2b0843232f9dde435d234806c95b}{SURPRISED}});}
+\DoxyCodeLine{79                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{80             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"SPEAKING"}:}
+\DoxyCodeLine{81                 \textcolor{comment}{// SPEAKING doesn't change the eyebrows state //}}
+\DoxyCodeLine{82                 \textcolor{comment}{// This allows for surprised speaking and angry speaking //}}
+\DoxyCodeLine{83                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{84             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{85                 \textcolor{comment}{// EVerything that doesn't need eyebrows goes here //}}
+\DoxyCodeLine{86                 \mbox{\hyperlink{class_eyebrow_controller_ae7a79ab56477aa98a05a539659df0460}{animator}}.SetInteger(\textcolor{stringliteral}{"emotion"}, \mbox{\hyperlink{class_eyebrow_controller_a8351a5f4d220688dfee31bbc4b5129e8}{NO\_EYEBROWS}});}
+\DoxyCodeLine{87                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{88         \}}
+\DoxyCodeLine{89     \}}
+
+\end{DoxyCode}
+
+
+References A\+N\+G\+RY, animator, N\+O\+\_\+\+E\+Y\+E\+B\+R\+O\+WS, and S\+U\+R\+P\+R\+I\+S\+ED.
+
+\mbox{\Hypertarget{class_eyebrow_controller_a91d51b3c5eef7407bd64957649f150c0}\label{class_eyebrow_controller_a91d51b3c5eef7407bd64957649f150c0}} 
+\index{EyebrowController@{EyebrowController}!Start@{Start}}
+\index{Start@{Start}!EyebrowController@{EyebrowController}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Eyebrow\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called before the first frame update. 
+
+Runs once.
+
+\begin{DoxyItemize}
+\item Fetches a reference to the Animator instance attached to the Unity object \char`\"{}eyebrows\char`\"{} in the Unity environment \end{DoxyItemize}
+
+
+Definition at line 47 of file Eyebrow\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48     \{}
+\DoxyCodeLine{49         \mbox{\hyperlink{class_eyebrow_controller_ae7a79ab56477aa98a05a539659df0460}{animator}} = GetComponent<Animator>();}
+\DoxyCodeLine{50     \}}
+
+\end{DoxyCode}
+
+
+References animator.
+
+\mbox{\Hypertarget{class_eyebrow_controller_a8aca91301fa75ee49b20cfdbe12b82c5}\label{class_eyebrow_controller_a8aca91301fa75ee49b20cfdbe12b82c5}} 
+\index{EyebrowController@{EyebrowController}!Update@{Update}}
+\index{Update@{Update}!EyebrowController@{EyebrowController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Eyebrow\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called once per frame. 
+
+Loops.
+
+\begin{DoxyItemize}
+\item Is empty here \end{DoxyItemize}
+
+
+Definition at line 57 of file Eyebrow\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58     \{}
+\DoxyCodeLine{59     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eyebrow_controller_acad1a5a0c7886a14f365909dc3c1cd43}\label{class_eyebrow_controller_acad1a5a0c7886a14f365909dc3c1cd43}} 
+\index{EyebrowController@{EyebrowController}!ANGRY@{ANGRY}}
+\index{ANGRY@{ANGRY}!EyebrowController@{EyebrowController}}
+\doxysubsubsection{\texorpdfstring{ANGRY}{ANGRY}}
+{\footnotesize\ttfamily Eyebrow\+Controller.\+A\+N\+G\+RY = 3\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Universal integer for A\+N\+G\+RY. 
+
+Triggers eyebrows tied to the A\+N\+G\+RY look 
+
+Definition at line 40 of file Eyebrow\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion().
+
+\mbox{\Hypertarget{class_eyebrow_controller_ae7a79ab56477aa98a05a539659df0460}\label{class_eyebrow_controller_ae7a79ab56477aa98a05a539659df0460}} 
+\index{EyebrowController@{EyebrowController}!animator@{animator}}
+\index{animator@{animator}!EyebrowController@{EyebrowController}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily Animator Eyebrow\+Controller.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Animator object. 
+
+Instance of the Animator class. Holds an animator controller which in turn holds animations and handles the switches between them. 
+
+Definition at line 22 of file Eyebrow\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion(), and Start().
+
+\mbox{\Hypertarget{class_eyebrow_controller_a8351a5f4d220688dfee31bbc4b5129e8}\label{class_eyebrow_controller_a8351a5f4d220688dfee31bbc4b5129e8}} 
+\index{EyebrowController@{EyebrowController}!NO\_EYEBROWS@{NO\_EYEBROWS}}
+\index{NO\_EYEBROWS@{NO\_EYEBROWS}!EyebrowController@{EyebrowController}}
+\doxysubsubsection{\texorpdfstring{NO\_EYEBROWS}{NO\_EYEBROWS}}
+{\footnotesize\ttfamily readonly int Eyebrow\+Controller.\+N\+O\+\_\+\+E\+Y\+E\+B\+R\+O\+WS = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Universal integer for NO E\+X\+P\+R\+E\+S\+S\+I\+ON. 
+
+Triggers eyebrows to turn off 
+
+Definition at line 28 of file Eyebrow\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion().
+
+\mbox{\Hypertarget{class_eyebrow_controller_abe7c2b0843232f9dde435d234806c95b}\label{class_eyebrow_controller_abe7c2b0843232f9dde435d234806c95b}} 
+\index{EyebrowController@{EyebrowController}!SURPRISED@{SURPRISED}}
+\index{SURPRISED@{SURPRISED}!EyebrowController@{EyebrowController}}
+\doxysubsubsection{\texorpdfstring{SURPRISED}{SURPRISED}}
+{\footnotesize\ttfamily Eyebrow\+Controller.\+S\+U\+R\+P\+R\+I\+S\+ED = 2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Universal integer for S\+U\+R\+P\+R\+I\+S\+ED. 
+
+Triggers eyebrows tied to the S\+U\+R\+P\+R\+I\+S\+ED look 
+
+Definition at line 40 of file Eyebrow\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_eyebrow_controller_8cs}{Eyebrow\+Controller.\+cs}}\end{DoxyCompactItemize}

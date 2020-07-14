@@ -1,0 +1,358 @@
+\hypertarget{class_mouth_controller}{}\doxysection{Mouth\+Controller Class Reference}
+\label{class_mouth_controller}\index{MouthController@{MouthController}}
+
+
+Controls the mouth.  
+
+
+Inheritance diagram for Mouth\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{da/d48/class_mouth_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mouth_controller_a67dfd69757e35d11b6aa7e534f7d8249}{Set\+Emotion}} (string emotion)
+\begin{DoxyCompactList}\small\item\em Sets mouth emotion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mouth_controller_a86d3464fc7699fa08139a15c1b6a373a}{Set\+Speaking}} (string speaking)
+\begin{DoxyCompactList}\small\item\em Handles mouth movement in S\+P\+E\+A\+K\+I\+NG emotion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mouth_controller_ad32b5a73f531c89e70d35d5bb6cd1d16}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Called before the first frame update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mouth_controller_a8cca07fef2ab76fc0be98575e934fa90}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Called once per frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Animator \mbox{\hyperlink{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}{animator}}
+\begin{DoxyCompactList}\small\item\em Animator object. \end{DoxyCompactList}\item 
+readonly int \mbox{\hyperlink{class_mouth_controller_a82e01990a32351df4c38761b46b968d2}{S\+AD}} = 1
+\begin{DoxyCompactList}\small\item\em Universal integer for S\+AD. \end{DoxyCompactList}\item 
+readonly int \mbox{\hyperlink{class_mouth_controller_ab06d36bb1aee08c40f1599e1a32b36cf}{A\+N\+G\+RY}} = 1
+\begin{DoxyCompactList}\small\item\em Universal integer for A\+N\+G\+RY. \end{DoxyCompactList}\item 
+readonly int \mbox{\hyperlink{class_mouth_controller_a36e32b1c951081a4eae2451d0a6259e3}{H\+A\+P\+PY}} = 0
+\begin{DoxyCompactList}\small\item\em Universal integer for H\+A\+P\+PY. \end{DoxyCompactList}\item 
+readonly int \mbox{\hyperlink{class_mouth_controller_a9bbc7ba30f4cffbb6779538500687764}{S\+U\+R\+P\+R\+I\+S\+ED}} = 2
+\begin{DoxyCompactList}\small\item\em Universal integer for S\+U\+R\+P\+R\+I\+S\+ED. \end{DoxyCompactList}\item 
+readonly int \mbox{\hyperlink{class_mouth_controller_a2313ad76b0cb672a0c9b4b08ad59d897}{S\+P\+E\+A\+K\+I\+NG}} = 5
+\begin{DoxyCompactList}\small\item\em Universal integer for S\+P\+E\+A\+K\+I\+NG. \end{DoxyCompactList}\item 
+readonly int \mbox{\hyperlink{class_mouth_controller_a8c012c85d17ee71d6e3ffdc8f124eb07}{I\+D\+LE}} = 4
+\begin{DoxyCompactList}\small\item\em Universal integer for I\+D\+LE. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_mouth_controller_ab254ff138fdb729c2a8da9bf15035e7e}{current\+Emotion}}
+\begin{DoxyCompactList}\small\item\em Holds present emotion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls the mouth. 
+
+Handles the mouth and its animations 
+
+Definition at line 15 of file Mouth\+Controller.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mouth_controller_a67dfd69757e35d11b6aa7e534f7d8249}\label{class_mouth_controller_a67dfd69757e35d11b6aa7e534f7d8249}} 
+\index{MouthController@{MouthController}!SetEmotion@{SetEmotion}}
+\index{SetEmotion@{SetEmotion}!MouthController@{MouthController}}
+\doxysubsubsection{\texorpdfstring{SetEmotion()}{SetEmotion()}}
+{\footnotesize\ttfamily void Mouth\+Controller.\+Set\+Emotion (\begin{DoxyParamCaption}\item[{string}]{emotion }\end{DoxyParamCaption})}
+
+
+
+Sets mouth emotion. 
+
+\begin{DoxyItemize}
+\item Called from J\+A\+VA code \item Receives an emotion String \item Runs a switch case that updates the animator\textquotesingle{}s integer named \char`\"{}emotion\char`\"{} \item That triggers an animation 
+\begin{DoxyParams}{Parameters}
+{\em emotion} & Possible values\+: H\+A\+P\+PY, S\+AD, A\+N\+G\+RY, S\+U\+R\+P\+R\+I\+S\+ED, I\+D\+LE, S\+P\+E\+A\+K\+I\+NG \\
+\hline
+\end{DoxyParams}
+\end{DoxyItemize}
+
+
+Definition at line 86 of file Mouth\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86                                            \{}
+\DoxyCodeLine{87         \textcolor{keywordflow}{switch} (emotion) \{}
+\DoxyCodeLine{88             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"ANGRY"}:}
+\DoxyCodeLine{89                 \mbox{\hyperlink{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}{animator}}.SetInteger(\textcolor{stringliteral}{"emotion"}, \mbox{\hyperlink{class_mouth_controller_ab06d36bb1aee08c40f1599e1a32b36cf}{ANGRY}});}
+\DoxyCodeLine{90                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{91             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"SAD"}:}
+\DoxyCodeLine{92                 \mbox{\hyperlink{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}{animator}}.SetInteger(\textcolor{stringliteral}{"emotion"}, \mbox{\hyperlink{class_mouth_controller_a82e01990a32351df4c38761b46b968d2}{SAD}});}
+\DoxyCodeLine{93                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{94             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"HAPPY"}:}
+\DoxyCodeLine{95                 \mbox{\hyperlink{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}{animator}}.SetInteger(\textcolor{stringliteral}{"emotion"}, \mbox{\hyperlink{class_mouth_controller_a36e32b1c951081a4eae2451d0a6259e3}{HAPPY}});}
+\DoxyCodeLine{96                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{97             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"SURPRISED"}:}
+\DoxyCodeLine{98                 \mbox{\hyperlink{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}{animator}}.SetInteger(\textcolor{stringliteral}{"emotion"}, \mbox{\hyperlink{class_mouth_controller_a9bbc7ba30f4cffbb6779538500687764}{SURPRISED}});}
+\DoxyCodeLine{99                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{100             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"IDLE"}:}
+\DoxyCodeLine{101                 \mbox{\hyperlink{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}{animator}}.SetInteger(\textcolor{stringliteral}{"emotion"}, \mbox{\hyperlink{class_mouth_controller_a8c012c85d17ee71d6e3ffdc8f124eb07}{IDLE}});}
+\DoxyCodeLine{102                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{103         \}}
+\DoxyCodeLine{104     \}}
+
+\end{DoxyCode}
+
+
+References A\+N\+G\+RY, animator, H\+A\+P\+PY, I\+D\+LE, S\+AD, and S\+U\+R\+P\+R\+I\+S\+ED.
+
+\mbox{\Hypertarget{class_mouth_controller_a86d3464fc7699fa08139a15c1b6a373a}\label{class_mouth_controller_a86d3464fc7699fa08139a15c1b6a373a}} 
+\index{MouthController@{MouthController}!SetSpeaking@{SetSpeaking}}
+\index{SetSpeaking@{SetSpeaking}!MouthController@{MouthController}}
+\doxysubsubsection{\texorpdfstring{SetSpeaking()}{SetSpeaking()}}
+{\footnotesize\ttfamily void Mouth\+Controller.\+Set\+Speaking (\begin{DoxyParamCaption}\item[{string}]{speaking }\end{DoxyParamCaption})}
+
+
+
+Handles mouth movement in S\+P\+E\+A\+K\+I\+NG emotion. 
+
+\begin{DoxyItemize}
+\item Called from J\+A\+VA code \item Receives a String pertaining to whether the mouth should speaking or not speaking \item Saves the current emotion value unless it is speaking. This prevents a speaking loop. \item Updates the animator\textquotesingle{}s integer named \char`\"{}emotion\char`\"{} to S\+P\+E\+A\+K\+I\+NG. That triggers an animation. \item Once it receives a S\+T\+OP instruction from J\+A\+VA, it sets the \char`\"{}emotion\char`\"{} value back to what it was before it was set to S\+P\+E\+A\+K\+I\+NG. 
+\begin{DoxyParams}{Parameters}
+{\em speaking} & Possible values\+: S\+T\+A\+RT and S\+T\+OP \\
+\hline
+\end{DoxyParams}
+\end{DoxyItemize}
+
+
+Definition at line 116 of file Mouth\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{116                                              \{}
+\DoxyCodeLine{117         }
+\DoxyCodeLine{118         \textcolor{keywordflow}{switch} (speaking) \{}
+\DoxyCodeLine{119             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"START"}:}
+\DoxyCodeLine{120                 \textcolor{comment}{// save previous mouth state //}}
+\DoxyCodeLine{121                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}{animator}}.GetInteger(\textcolor{stringliteral}{"emotion"}) != \mbox{\hyperlink{class_mouth_controller_a2313ad76b0cb672a0c9b4b08ad59d897}{SPEAKING}})}
+\DoxyCodeLine{122                     \mbox{\hyperlink{class_mouth_controller_ab254ff138fdb729c2a8da9bf15035e7e}{currentEmotion}} = \mbox{\hyperlink{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}{animator}}.GetInteger(\textcolor{stringliteral}{"emotion"});}
+\DoxyCodeLine{123                 \textcolor{comment}{// set state to speaking //}}
+\DoxyCodeLine{124                 \mbox{\hyperlink{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}{animator}}.SetInteger(\textcolor{stringliteral}{"emotion"}, \mbox{\hyperlink{class_mouth_controller_a2313ad76b0cb672a0c9b4b08ad59d897}{SPEAKING}});}
+\DoxyCodeLine{125                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{126             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"STOP"}:}
+\DoxyCodeLine{127                 \textcolor{comment}{// reset mouth state after done speaking //}}
+\DoxyCodeLine{128                 \mbox{\hyperlink{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}{animator}}.SetInteger(\textcolor{stringliteral}{"emotion"}, \mbox{\hyperlink{class_mouth_controller_ab254ff138fdb729c2a8da9bf15035e7e}{currentEmotion}});}
+\DoxyCodeLine{129                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{130         \}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132     \}}
+
+\end{DoxyCode}
+
+
+References animator, current\+Emotion, and S\+P\+E\+A\+K\+I\+NG.
+
+
+
+Referenced by Eye\+Poke\+Handler.\+Stop\+Mouth\+Moving(), and Eye\+Poke\+Handler.\+Update().
+
+\mbox{\Hypertarget{class_mouth_controller_ad32b5a73f531c89e70d35d5bb6cd1d16}\label{class_mouth_controller_ad32b5a73f531c89e70d35d5bb6cd1d16}} 
+\index{MouthController@{MouthController}!Start@{Start}}
+\index{Start@{Start}!MouthController@{MouthController}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Mouth\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called before the first frame update. 
+
+\begin{DoxyItemize}
+\item Runs once \item Fetches a reference to the Animator instance attached to the Unity object \char`\"{}mouth\char`\"{} in the Unity environment \item sets default starting emotion \end{DoxyItemize}
+
+
+Definition at line 63 of file Mouth\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                   \{}
+\DoxyCodeLine{64         \mbox{\hyperlink{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}{animator}} = GetComponent<Animator>();}
+\DoxyCodeLine{65         \mbox{\hyperlink{class_mouth_controller_ab254ff138fdb729c2a8da9bf15035e7e}{currentEmotion}} = \mbox{\hyperlink{class_mouth_controller_a36e32b1c951081a4eae2451d0a6259e3}{HAPPY}}; \textcolor{comment}{//just in case scenario}}
+\DoxyCodeLine{66     \}}
+
+\end{DoxyCode}
+
+
+References animator, current\+Emotion, and H\+A\+P\+PY.
+
+\mbox{\Hypertarget{class_mouth_controller_a8cca07fef2ab76fc0be98575e934fa90}\label{class_mouth_controller_a8cca07fef2ab76fc0be98575e934fa90}} 
+\index{MouthController@{MouthController}!Update@{Update}}
+\index{Update@{Update}!MouthController@{MouthController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Mouth\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called once per frame. 
+
+\begin{DoxyItemize}
+\item Loops \item Is empty here \end{DoxyItemize}
+
+
+Definition at line 74 of file Mouth\+Controller.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74                   \{}
+\DoxyCodeLine{75     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mouth_controller_ab06d36bb1aee08c40f1599e1a32b36cf}\label{class_mouth_controller_ab06d36bb1aee08c40f1599e1a32b36cf}} 
+\index{MouthController@{MouthController}!ANGRY@{ANGRY}}
+\index{ANGRY@{ANGRY}!MouthController@{MouthController}}
+\doxysubsubsection{\texorpdfstring{ANGRY}{ANGRY}}
+{\footnotesize\ttfamily Mouth\+Controller.\+A\+N\+G\+RY = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Universal integer for A\+N\+G\+RY. 
+
+Triggers mouth tied to the A\+N\+G\+RY look 
+
+Definition at line 48 of file Mouth\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion().
+
+\mbox{\Hypertarget{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}\label{class_mouth_controller_a7ad14b27e1e107b309bf8c9fe8652d9a}} 
+\index{MouthController@{MouthController}!animator@{animator}}
+\index{animator@{animator}!MouthController@{MouthController}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily Animator Mouth\+Controller.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Animator object. 
+
+Instance of the Animator class. Holds an animator controller which in turn holds animations and handles the switches between them. 
+
+Definition at line 21 of file Mouth\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion(), Set\+Speaking(), and Start().
+
+\mbox{\Hypertarget{class_mouth_controller_ab254ff138fdb729c2a8da9bf15035e7e}\label{class_mouth_controller_ab254ff138fdb729c2a8da9bf15035e7e}} 
+\index{MouthController@{MouthController}!currentEmotion@{currentEmotion}}
+\index{currentEmotion@{currentEmotion}!MouthController@{MouthController}}
+\doxysubsubsection{\texorpdfstring{currentEmotion}{currentEmotion}}
+{\footnotesize\ttfamily int Mouth\+Controller.\+current\+Emotion\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Holds present emotion. 
+
+Contains the present emotional state. 
+
+Definition at line 54 of file Mouth\+Controller.\+cs.
+
+
+
+Referenced by Set\+Speaking(), and Start().
+
+\mbox{\Hypertarget{class_mouth_controller_a36e32b1c951081a4eae2451d0a6259e3}\label{class_mouth_controller_a36e32b1c951081a4eae2451d0a6259e3}} 
+\index{MouthController@{MouthController}!HAPPY@{HAPPY}}
+\index{HAPPY@{HAPPY}!MouthController@{MouthController}}
+\doxysubsubsection{\texorpdfstring{HAPPY}{HAPPY}}
+{\footnotesize\ttfamily Mouth\+Controller.\+H\+A\+P\+PY = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Universal integer for H\+A\+P\+PY. 
+
+Triggers mouth tied to the H\+A\+P\+PY look 
+
+Definition at line 48 of file Mouth\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion(), and Start().
+
+\mbox{\Hypertarget{class_mouth_controller_a8c012c85d17ee71d6e3ffdc8f124eb07}\label{class_mouth_controller_a8c012c85d17ee71d6e3ffdc8f124eb07}} 
+\index{MouthController@{MouthController}!IDLE@{IDLE}}
+\index{IDLE@{IDLE}!MouthController@{MouthController}}
+\doxysubsubsection{\texorpdfstring{IDLE}{IDLE}}
+{\footnotesize\ttfamily Mouth\+Controller.\+I\+D\+LE = 4\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Universal integer for I\+D\+LE. 
+
+Triggers mouth tied to the I\+D\+LE look 
+
+Definition at line 48 of file Mouth\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion().
+
+\mbox{\Hypertarget{class_mouth_controller_a82e01990a32351df4c38761b46b968d2}\label{class_mouth_controller_a82e01990a32351df4c38761b46b968d2}} 
+\index{MouthController@{MouthController}!SAD@{SAD}}
+\index{SAD@{SAD}!MouthController@{MouthController}}
+\doxysubsubsection{\texorpdfstring{SAD}{SAD}}
+{\footnotesize\ttfamily Mouth\+Controller.\+S\+AD = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Universal integer for S\+AD. 
+
+Triggers mouth tied to the S\+AD look 
+
+Definition at line 48 of file Mouth\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion().
+
+\mbox{\Hypertarget{class_mouth_controller_a2313ad76b0cb672a0c9b4b08ad59d897}\label{class_mouth_controller_a2313ad76b0cb672a0c9b4b08ad59d897}} 
+\index{MouthController@{MouthController}!SPEAKING@{SPEAKING}}
+\index{SPEAKING@{SPEAKING}!MouthController@{MouthController}}
+\doxysubsubsection{\texorpdfstring{SPEAKING}{SPEAKING}}
+{\footnotesize\ttfamily Mouth\+Controller.\+S\+P\+E\+A\+K\+I\+NG = 5\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Universal integer for S\+P\+E\+A\+K\+I\+NG. 
+
+Triggers mouth tied to the S\+P\+E\+A\+K\+I\+NG look 
+
+Definition at line 48 of file Mouth\+Controller.\+cs.
+
+
+
+Referenced by Set\+Speaking().
+
+\mbox{\Hypertarget{class_mouth_controller_a9bbc7ba30f4cffbb6779538500687764}\label{class_mouth_controller_a9bbc7ba30f4cffbb6779538500687764}} 
+\index{MouthController@{MouthController}!SURPRISED@{SURPRISED}}
+\index{SURPRISED@{SURPRISED}!MouthController@{MouthController}}
+\doxysubsubsection{\texorpdfstring{SURPRISED}{SURPRISED}}
+{\footnotesize\ttfamily Mouth\+Controller.\+S\+U\+R\+P\+R\+I\+S\+ED = 2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Universal integer for S\+U\+R\+P\+R\+I\+S\+ED. 
+
+Triggers mouth tied to the S\+U\+R\+P\+R\+I\+S\+ED look 
+
+Definition at line 48 of file Mouth\+Controller.\+cs.
+
+
+
+Referenced by Set\+Emotion().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_mouth_controller_8cs}{Mouth\+Controller.\+cs}}\end{DoxyCompactItemize}

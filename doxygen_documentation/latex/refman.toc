@@ -1,0 +1,105 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}F02-\/145 Unity}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}J\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}VA}{1}{section.1.2}% 
+\contentsline {subsection}{\numberline {1.2.1}Exporting to J\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}VA}{1}{subsection.1.2.1}% 
+\contentsline {subsection}{\numberline {1.2.2}Opening in Android Studio}{1}{subsection.1.2.2}% 
+\contentsline {subsubsection}{\numberline {1.2.2.1}Note}{2}{subsubsection.1.2.2.1}% 
+\contentsline {subsubsection}{\numberline {1.2.2.2}Author}{2}{subsubsection.1.2.2.2}% 
+\contentsline {subsubsection}{\numberline {1.2.2.3}Version}{2}{subsubsection.1.2.2.3}% 
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}% 
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}% 
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}% 
+\contentsline {chapter}{\numberline {5}Class Documentation}{9}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Background\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Color\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller Class Reference}{9}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{10}{subsection.5.1.1}% 
+\contentsline {subsection}{\numberline {5.1.2}Member Function Documentation}{10}{subsection.5.1.2}% 
+\contentsline {subsubsection}{\numberline {5.1.2.1}ChangeBackgroundColor()}{10}{subsubsection.5.1.2.1}% 
+\contentsline {subsubsection}{\numberline {5.1.2.2}Start()}{11}{subsubsection.5.1.2.2}% 
+\contentsline {subsubsection}{\numberline {5.1.2.3}Update()}{11}{subsubsection.5.1.2.3}% 
+\contentsline {subsection}{\numberline {5.1.3}Member Data Documentation}{11}{subsection.5.1.3}% 
+\contentsline {subsubsection}{\numberline {5.1.3.1}cam}{12}{subsubsection.5.1.3.1}% 
+\contentsline {subsubsection}{\numberline {5.1.3.2}defaultColor}{12}{subsubsection.5.1.3.2}% 
+\contentsline {subsubsection}{\numberline {5.1.3.3}endColor}{12}{subsubsection.5.1.3.3}% 
+\contentsline {subsubsection}{\numberline {5.1.3.4}speed}{12}{subsubsection.5.1.3.4}% 
+\contentsline {subsubsection}{\numberline {5.1.3.5}startColor}{13}{subsubsection.5.1.3.5}% 
+\contentsline {subsubsection}{\numberline {5.1.3.6}startTime}{13}{subsubsection.5.1.3.6}% 
+\contentsline {section}{\numberline {5.2}Eyebrow\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller Class Reference}{13}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{14}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}Member Function Documentation}{14}{subsection.5.2.2}% 
+\contentsline {subsubsection}{\numberline {5.2.2.1}SetEmotion()}{14}{subsubsection.5.2.2.1}% 
+\contentsline {subsubsection}{\numberline {5.2.2.2}Start()}{15}{subsubsection.5.2.2.2}% 
+\contentsline {subsubsection}{\numberline {5.2.2.3}Update()}{15}{subsubsection.5.2.2.3}% 
+\contentsline {subsection}{\numberline {5.2.3}Member Data Documentation}{15}{subsection.5.2.3}% 
+\contentsline {subsubsection}{\numberline {5.2.3.1}ANGRY}{16}{subsubsection.5.2.3.1}% 
+\contentsline {subsubsection}{\numberline {5.2.3.2}animator}{16}{subsubsection.5.2.3.2}% 
+\contentsline {subsubsection}{\numberline {5.2.3.3}NO\_EYEBROWS}{16}{subsubsection.5.2.3.3}% 
+\contentsline {subsubsection}{\numberline {5.2.3.4}SURPRISED}{16}{subsubsection.5.2.3.4}% 
+\contentsline {section}{\numberline {5.3}Eyelid\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller Class Reference}{17}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{17}{subsection.5.3.1}% 
+\contentsline {subsection}{\numberline {5.3.2}Member Function Documentation}{17}{subsection.5.3.2}% 
+\contentsline {subsubsection}{\numberline {5.3.2.1}ForcedBlink()}{18}{subsubsection.5.3.2.1}% 
+\contentsline {subsubsection}{\numberline {5.3.2.2}GoToSleep()}{18}{subsubsection.5.3.2.2}% 
+\contentsline {subsubsection}{\numberline {5.3.2.3}SetGoToSleepFalse()}{19}{subsubsection.5.3.2.3}% 
+\contentsline {subsubsection}{\numberline {5.3.2.4}SetPokeFalse()}{19}{subsubsection.5.3.2.4}% 
+\contentsline {subsubsection}{\numberline {5.3.2.5}Start()}{19}{subsubsection.5.3.2.5}% 
+\contentsline {subsubsection}{\numberline {5.3.2.6}Update()}{20}{subsubsection.5.3.2.6}% 
+\contentsline {subsection}{\numberline {5.3.3}Member Data Documentation}{20}{subsection.5.3.3}% 
+\contentsline {subsubsection}{\numberline {5.3.3.1}animator}{20}{subsubsection.5.3.3.1}% 
+\contentsline {section}{\numberline {5.4}Eye\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Poke\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Handler Class Reference}{20}{section.5.4}% 
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{21}{subsection.5.4.1}% 
+\contentsline {subsection}{\numberline {5.4.2}Member Function Documentation}{21}{subsection.5.4.2}% 
+\contentsline {subsubsection}{\numberline {5.4.2.1}SetEyePokeEnabledState()}{21}{subsubsection.5.4.2.1}% 
+\contentsline {subsubsection}{\numberline {5.4.2.2}Start()}{22}{subsubsection.5.4.2.2}% 
+\contentsline {subsubsection}{\numberline {5.4.2.3}StopMouthMoving()}{22}{subsubsection.5.4.2.3}% 
+\contentsline {subsubsection}{\numberline {5.4.2.4}Update()}{23}{subsubsection.5.4.2.4}% 
+\contentsline {subsection}{\numberline {5.4.3}Member Data Documentation}{23}{subsection.5.4.3}% 
+\contentsline {subsubsection}{\numberline {5.4.3.1}audioClip}{23}{subsubsection.5.4.3.1}% 
+\contentsline {subsubsection}{\numberline {5.4.3.2}audioSource}{24}{subsubsection.5.4.3.2}% 
+\contentsline {subsubsection}{\numberline {5.4.3.3}EYE\_POKE\_ENABLED}{24}{subsubsection.5.4.3.3}% 
+\contentsline {subsubsection}{\numberline {5.4.3.4}eyelidController}{24}{subsubsection.5.4.3.4}% 
+\contentsline {subsubsection}{\numberline {5.4.3.5}mouthController}{24}{subsubsection.5.4.3.5}% 
+\contentsline {section}{\numberline {5.5}Mouth\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller Class Reference}{25}{section.5.5}% 
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{26}{subsection.5.5.1}% 
+\contentsline {subsection}{\numberline {5.5.2}Member Function Documentation}{26}{subsection.5.5.2}% 
+\contentsline {subsubsection}{\numberline {5.5.2.1}SetEmotion()}{26}{subsubsection.5.5.2.1}% 
+\contentsline {subsubsection}{\numberline {5.5.2.2}SetSpeaking()}{27}{subsubsection.5.5.2.2}% 
+\contentsline {subsubsection}{\numberline {5.5.2.3}Start()}{27}{subsubsection.5.5.2.3}% 
+\contentsline {subsubsection}{\numberline {5.5.2.4}Update()}{28}{subsubsection.5.5.2.4}% 
+\contentsline {subsection}{\numberline {5.5.3}Member Data Documentation}{28}{subsection.5.5.3}% 
+\contentsline {subsubsection}{\numberline {5.5.3.1}ANGRY}{28}{subsubsection.5.5.3.1}% 
+\contentsline {subsubsection}{\numberline {5.5.3.2}animator}{28}{subsubsection.5.5.3.2}% 
+\contentsline {subsubsection}{\numberline {5.5.3.3}currentEmotion}{29}{subsubsection.5.5.3.3}% 
+\contentsline {subsubsection}{\numberline {5.5.3.4}HAPPY}{29}{subsubsection.5.5.3.4}% 
+\contentsline {subsubsection}{\numberline {5.5.3.5}IDLE}{29}{subsubsection.5.5.3.5}% 
+\contentsline {subsubsection}{\numberline {5.5.3.6}SAD}{29}{subsubsection.5.5.3.6}% 
+\contentsline {subsubsection}{\numberline {5.5.3.7}SPEAKING}{30}{subsubsection.5.5.3.7}% 
+\contentsline {subsubsection}{\numberline {5.5.3.8}SURPRISED}{30}{subsubsection.5.5.3.8}% 
+\contentsline {section}{\numberline {5.6}Tear\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller Class Reference}{30}{section.5.6}% 
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{31}{subsection.5.6.1}% 
+\contentsline {subsection}{\numberline {5.6.2}Member Function Documentation}{31}{subsection.5.6.2}% 
+\contentsline {subsubsection}{\numberline {5.6.2.1}SetEmotion()}{31}{subsubsection.5.6.2.1}% 
+\contentsline {subsubsection}{\numberline {5.6.2.2}Start()}{32}{subsubsection.5.6.2.2}% 
+\contentsline {subsubsection}{\numberline {5.6.2.3}Update()}{32}{subsubsection.5.6.2.3}% 
+\contentsline {subsection}{\numberline {5.6.3}Member Data Documentation}{32}{subsection.5.6.3}% 
+\contentsline {subsubsection}{\numberline {5.6.3.1}animator}{33}{subsubsection.5.6.3.1}% 
+\contentsline {subsubsection}{\numberline {5.6.3.2}NOT\_SAD}{33}{subsubsection.5.6.3.2}% 
+\contentsline {subsubsection}{\numberline {5.6.3.3}SAD}{33}{subsubsection.5.6.3.3}% 
+\contentsline {chapter}{\numberline {6}File Documentation}{35}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Background\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Color\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs File Reference}{35}{section.6.1}% 
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{35}{subsection.6.1.1}% 
+\contentsline {section}{\numberline {6.2}Eyebrow\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs File Reference}{35}{section.6.2}% 
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{35}{subsection.6.2.1}% 
+\contentsline {section}{\numberline {6.3}Eyelid\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs File Reference}{36}{section.6.3}% 
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{36}{subsection.6.3.1}% 
+\contentsline {section}{\numberline {6.4}Eye\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Poke\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Handler.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs File Reference}{36}{section.6.4}% 
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{36}{subsection.6.4.1}% 
+\contentsline {section}{\numberline {6.5}Mouth\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs File Reference}{36}{section.6.5}% 
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{37}{subsection.6.5.1}% 
+\contentsline {section}{\numberline {6.6}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}md File Reference}{37}{section.6.6}% 
+\contentsline {section}{\numberline {6.7}Tear\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Controller.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cs File Reference}{37}{section.6.7}% 
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{37}{subsection.6.7.1}% 
+\contentsline {chapter}{Index}{39}{section*.32}% 

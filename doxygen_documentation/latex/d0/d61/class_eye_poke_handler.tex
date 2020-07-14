@@ -1,0 +1,289 @@
+\hypertarget{class_eye_poke_handler}{}\doxysection{Eye\+Poke\+Handler Class Reference}
+\label{class_eye_poke_handler}\index{EyePokeHandler@{EyePokeHandler}}
+
+
+Handles poke events.  
+
+
+Inheritance diagram for Eye\+Poke\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/d61/class_eye_poke_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_eye_poke_handler_a88fc124e47ea9f73d0d6ac10ab7afffc}{E\+Y\+E\+\_\+\+P\+O\+K\+E\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\begin{DoxyCompactList}\small\item\em Holds eyepoke enabled state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eye_poke_handler_a9b17c44168a2a33e96881d9745368e8b}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Called before the first frame update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_eye_poke_handler_a9366020ddf70c937b1e1d83a5e69c6f1}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Called once per frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_eye_poke_handler_a74e5f44df7517892602c705883d27bc6}{Stop\+Mouth\+Moving}} ()
+\begin{DoxyCompactList}\small\item\em Sets mouth back to what it was doing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_eye_poke_handler_a4e2133c5a000939cf5969d01abed5f50}{Set\+Eye\+Poke\+Enabled\+State}} (string state)
+\begin{DoxyCompactList}\small\item\em Toggles poking between enabled/or disabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Source \mbox{\hyperlink{class_eye_poke_handler_ab7e922d08065b97b421b11c99dc0b80b}{audio\+Source}}
+\begin{DoxyCompactList}\small\item\em Audio\+Source object. \end{DoxyCompactList}\item 
+Audio\+Clip \mbox{\hyperlink{class_eye_poke_handler_aad45030bf203d1dcaaea15c721563028}{audio\+Clip}}
+\begin{DoxyCompactList}\small\item\em Audio\+Clip object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mouth_controller}{Mouth\+Controller}} \mbox{\hyperlink{class_eye_poke_handler_ab0828f7b5481ae0abec599b2cc06941e}{mouth\+Controller}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_mouth_controller}{Mouth\+Controller}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_eyelid_controller}{Eyelid\+Controller}} \mbox{\hyperlink{class_eye_poke_handler_a342c1385af69ac8727548597ded6c257}{eyelid\+Controller}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_eyelid_controller}{Eyelid\+Controller}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles poke events. 
+
+Handles eyelids, mouth and sound related to when the eyes are poked. Not connected to J\+A\+VA code. 
+
+Definition at line 15 of file Eye\+Poke\+Handler.\+cs.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_eye_poke_handler_a4e2133c5a000939cf5969d01abed5f50}\label{class_eye_poke_handler_a4e2133c5a000939cf5969d01abed5f50}} 
+\index{EyePokeHandler@{EyePokeHandler}!SetEyePokeEnabledState@{SetEyePokeEnabledState}}
+\index{SetEyePokeEnabledState@{SetEyePokeEnabledState}!EyePokeHandler@{EyePokeHandler}}
+\doxysubsubsection{\texorpdfstring{SetEyePokeEnabledState()}{SetEyePokeEnabledState()}}
+{\footnotesize\ttfamily void Eye\+Poke\+Handler.\+Set\+Eye\+Poke\+Enabled\+State (\begin{DoxyParamCaption}\item[{string}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Toggles poking between enabled/or disabled. 
+
+\begin{DoxyItemize}
+\item Called from J\+A\+VA \item Changes the value of E\+Y\+E\+\_\+\+P\+O\+K\+E\+\_\+\+E\+N\+A\+B\+L\+ED enabling or disabling a poke event response. 
+\begin{DoxyParams}{Parameters}
+{\em state} & T\+R\+UE or F\+A\+L\+SE \\
+\hline
+\end{DoxyParams}
+\end{DoxyItemize}
+
+
+Definition at line 113 of file Eye\+Poke\+Handler.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{113                                               \{}
+\DoxyCodeLine{114         \textcolor{keywordflow}{switch} (state.ToUpper()) \{}
+\DoxyCodeLine{115             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"TRUE"}:}
+\DoxyCodeLine{116                 \mbox{\hyperlink{class_eye_poke_handler_a88fc124e47ea9f73d0d6ac10ab7afffc}{EYE\_POKE\_ENABLED}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{117                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{118             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"FALSE"}:}
+\DoxyCodeLine{119                 \mbox{\hyperlink{class_eye_poke_handler_a88fc124e47ea9f73d0d6ac10ab7afffc}{EYE\_POKE\_ENABLED}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{120                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{121         \}}
+\DoxyCodeLine{122     \}}
+
+\end{DoxyCode}
+
+
+References E\+Y\+E\+\_\+\+P\+O\+K\+E\+\_\+\+E\+N\+A\+B\+L\+ED.
+
+\mbox{\Hypertarget{class_eye_poke_handler_a9b17c44168a2a33e96881d9745368e8b}\label{class_eye_poke_handler_a9b17c44168a2a33e96881d9745368e8b}} 
+\index{EyePokeHandler@{EyePokeHandler}!Start@{Start}}
+\index{Start@{Start}!EyePokeHandler@{EyePokeHandler}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Eye\+Poke\+Handler.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called before the first frame update. 
+
+\begin{DoxyItemize}
+\item Runs once \item Fetches a reference to Audio\+Source instance attached to Unity object \char`\"{}ouch\+\_\+zone\char`\"{} in the Unity environment \item Locates a reference to the \mbox{\hyperlink{class_mouth_controller}{Mouth\+Controller}} instance already present in the Unity environment \item Locates a reference to the \mbox{\hyperlink{class_eyelid_controller}{Eyelid\+Controller}} instance already present in the Unity environment \item Extracts the audio\+Clip fed to the Audio\+Source instance of the Unity object \char`\"{}ouch\+\_\+zone\char`\"{} in the Unity environment \item sets pokes to be enabled \end{DoxyItemize}
+
+
+Definition at line 57 of file Eye\+Poke\+Handler.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                  \{}
+\DoxyCodeLine{58         \mbox{\hyperlink{class_eye_poke_handler_ab7e922d08065b97b421b11c99dc0b80b}{audioSource}} = GetComponent<AudioSource>();}
+\DoxyCodeLine{59         \mbox{\hyperlink{class_eye_poke_handler_ab0828f7b5481ae0abec599b2cc06941e}{mouthController}} = FindObjectOfType<MouthController>();}
+\DoxyCodeLine{60         \mbox{\hyperlink{class_eye_poke_handler_a342c1385af69ac8727548597ded6c257}{eyelidController}} = FindObjectOfType<EyelidController>();}
+\DoxyCodeLine{61         \mbox{\hyperlink{class_eye_poke_handler_aad45030bf203d1dcaaea15c721563028}{audioClip}} = \mbox{\hyperlink{class_eye_poke_handler_ab7e922d08065b97b421b11c99dc0b80b}{audioSource}}.clip;}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63         \mbox{\hyperlink{class_eye_poke_handler_a88fc124e47ea9f73d0d6ac10ab7afffc}{EYE\_POKE\_ENABLED}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{64     \}}
+
+\end{DoxyCode}
+
+
+References audio\+Clip, audio\+Source, E\+Y\+E\+\_\+\+P\+O\+K\+E\+\_\+\+E\+N\+A\+B\+L\+ED, eyelid\+Controller, and mouth\+Controller.
+
+\mbox{\Hypertarget{class_eye_poke_handler_a74e5f44df7517892602c705883d27bc6}\label{class_eye_poke_handler_a74e5f44df7517892602c705883d27bc6}} 
+\index{EyePokeHandler@{EyePokeHandler}!StopMouthMoving@{StopMouthMoving}}
+\index{StopMouthMoving@{StopMouthMoving}!EyePokeHandler@{EyePokeHandler}}
+\doxysubsubsection{\texorpdfstring{StopMouthMoving()}{StopMouthMoving()}}
+{\footnotesize\ttfamily void Eye\+Poke\+Handler.\+Stop\+Mouth\+Moving (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets mouth back to what it was doing. 
+
+Called by \mbox{\hyperlink{class_eye_poke_handler_a9366020ddf70c937b1e1d83a5e69c6f1}{Update()}}. Sets \char`\"{}emotion\char`\"{} integer of the \char`\"{}mouth\char`\"{} animator controller S\+T\+OP. 
+
+Definition at line 102 of file Eye\+Poke\+Handler.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                            \{}
+\DoxyCodeLine{103     \mbox{\hyperlink{class_eye_poke_handler_ab0828f7b5481ae0abec599b2cc06941e}{mouthController}}.\mbox{\hyperlink{class_mouth_controller_a86d3464fc7699fa08139a15c1b6a373a}{SetSpeaking}}(\textcolor{stringliteral}{"STOP"});}
+\DoxyCodeLine{104     \}}
+
+\end{DoxyCode}
+
+
+References mouth\+Controller, and Mouth\+Controller.\+Set\+Speaking().
+
+\mbox{\Hypertarget{class_eye_poke_handler_a9366020ddf70c937b1e1d83a5e69c6f1}\label{class_eye_poke_handler_a9366020ddf70c937b1e1d83a5e69c6f1}} 
+\index{EyePokeHandler@{EyePokeHandler}!Update@{Update}}
+\index{Update@{Update}!EyePokeHandler@{EyePokeHandler}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Eye\+Poke\+Handler.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called once per frame. 
+
+\begin{DoxyItemize}
+\item Loops \item Detects a touch and checks if poking is enabled. \item If the touch is within the specified poke zone \item an audio plays \item the mouth moves \item the eyes blink \item Sets up a time delayed call (in seconds equal to the length of the audio\+Clip) to \mbox{\hyperlink{class_eye_poke_handler_a74e5f44df7517892602c705883d27bc6}{Stop\+Mouth\+Moving()}} \end{DoxyItemize}
+
+
+Definition at line 77 of file Eye\+Poke\+Handler.\+cs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                   \{}
+\DoxyCodeLine{78         \textcolor{keywordflow}{if} ((\mbox{\hyperlink{class_eye_poke_handler_a88fc124e47ea9f73d0d6ac10ab7afffc}{EYE\_POKE\_ENABLED}}) \&\& (Input.touchCount > 0) \&\& (Input.GetTouch(0).phase == TouchPhase.Began)) \{}
+\DoxyCodeLine{79             Debug.Log(\textcolor{stringliteral}{"Touching"});}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81             Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);}
+\DoxyCodeLine{82             RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84             \textcolor{keywordflow}{if} (hit.collider != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{85                 Debug.Log(hit.collider.name);}
+\DoxyCodeLine{86                 \textcolor{comment}{// audio plays //}}
+\DoxyCodeLine{87                 \mbox{\hyperlink{class_eye_poke_handler_ab7e922d08065b97b421b11c99dc0b80b}{audioSource}}.Play();}
+\DoxyCodeLine{88                 \textcolor{comment}{// mouth moves and stops moving after audio ends //}}
+\DoxyCodeLine{89                 \mbox{\hyperlink{class_eye_poke_handler_ab0828f7b5481ae0abec599b2cc06941e}{mouthController}}.\mbox{\hyperlink{class_mouth_controller_a86d3464fc7699fa08139a15c1b6a373a}{SetSpeaking}}(\textcolor{stringliteral}{"START"});}
+\DoxyCodeLine{90                 Invoke(\textcolor{stringliteral}{"StopMouthMoving"}, \mbox{\hyperlink{class_eye_poke_handler_aad45030bf203d1dcaaea15c721563028}{audioClip}}.length);}
+\DoxyCodeLine{91                 \textcolor{comment}{// eyes blink //}}
+\DoxyCodeLine{92                 \mbox{\hyperlink{class_eye_poke_handler_a342c1385af69ac8727548597ded6c257}{eyelidController}}.\mbox{\hyperlink{class_eyelid_controller_a7f9ab7cba044ec8701c1eaf7bd8e49ec}{ForcedBlink}}();}
+\DoxyCodeLine{93             \}}
+\DoxyCodeLine{94         \}}
+\DoxyCodeLine{95     \}}
+
+\end{DoxyCode}
+
+
+References audio\+Clip, audio\+Source, E\+Y\+E\+\_\+\+P\+O\+K\+E\+\_\+\+E\+N\+A\+B\+L\+ED, eyelid\+Controller, Eyelid\+Controller.\+Forced\+Blink(), mouth\+Controller, and Mouth\+Controller.\+Set\+Speaking().
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_eye_poke_handler_aad45030bf203d1dcaaea15c721563028}\label{class_eye_poke_handler_aad45030bf203d1dcaaea15c721563028}} 
+\index{EyePokeHandler@{EyePokeHandler}!audioClip@{audioClip}}
+\index{audioClip@{audioClip}!EyePokeHandler@{EyePokeHandler}}
+\doxysubsubsection{\texorpdfstring{audioClip}{audioClip}}
+{\footnotesize\ttfamily Audio\+Clip Eye\+Poke\+Handler.\+audio\+Clip\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Audio\+Clip object. 
+
+Instance of the Audio\+Clip class. Holds an audio clip. 
+
+Definition at line 27 of file Eye\+Poke\+Handler.\+cs.
+
+
+
+Referenced by Start(), and Update().
+
+\mbox{\Hypertarget{class_eye_poke_handler_ab7e922d08065b97b421b11c99dc0b80b}\label{class_eye_poke_handler_ab7e922d08065b97b421b11c99dc0b80b}} 
+\index{EyePokeHandler@{EyePokeHandler}!audioSource@{audioSource}}
+\index{audioSource@{audioSource}!EyePokeHandler@{EyePokeHandler}}
+\doxysubsubsection{\texorpdfstring{audioSource}{audioSource}}
+{\footnotesize\ttfamily Audio\+Source Eye\+Poke\+Handler.\+audio\+Source\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Audio\+Source object. 
+
+Instance of the Audio\+Source class. Holds an Audio\+Clip object and settings on how to run it etc. 
+
+Definition at line 21 of file Eye\+Poke\+Handler.\+cs.
+
+
+
+Referenced by Start(), and Update().
+
+\mbox{\Hypertarget{class_eye_poke_handler_a88fc124e47ea9f73d0d6ac10ab7afffc}\label{class_eye_poke_handler_a88fc124e47ea9f73d0d6ac10ab7afffc}} 
+\index{EyePokeHandler@{EyePokeHandler}!EYE\_POKE\_ENABLED@{EYE\_POKE\_ENABLED}}
+\index{EYE\_POKE\_ENABLED@{EYE\_POKE\_ENABLED}!EyePokeHandler@{EyePokeHandler}}
+\doxysubsubsection{\texorpdfstring{EYE\_POKE\_ENABLED}{EYE\_POKE\_ENABLED}}
+{\footnotesize\ttfamily bool Eye\+Poke\+Handler.\+E\+Y\+E\+\_\+\+P\+O\+K\+E\+\_\+\+E\+N\+A\+B\+L\+ED}
+
+
+
+Holds eyepoke enabled state. 
+
+Boolean which holds the status on whether or not poking is enabled. 
+
+Definition at line 45 of file Eye\+Poke\+Handler.\+cs.
+
+
+
+Referenced by Set\+Eye\+Poke\+Enabled\+State(), Start(), and Update().
+
+\mbox{\Hypertarget{class_eye_poke_handler_a342c1385af69ac8727548597ded6c257}\label{class_eye_poke_handler_a342c1385af69ac8727548597ded6c257}} 
+\index{EyePokeHandler@{EyePokeHandler}!eyelidController@{eyelidController}}
+\index{eyelidController@{eyelidController}!EyePokeHandler@{EyePokeHandler}}
+\doxysubsubsection{\texorpdfstring{eyelidController}{eyelidController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_eyelid_controller}{Eyelid\+Controller}} Eye\+Poke\+Handler.\+eyelid\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_eyelid_controller}{Eyelid\+Controller}} object. 
+
+Instance of the custom \mbox{\hyperlink{class_eyelid_controller}{Eyelid\+Controller}} class. Handles eyelid animations and transitions. 
+
+Definition at line 39 of file Eye\+Poke\+Handler.\+cs.
+
+
+
+Referenced by Start(), and Update().
+
+\mbox{\Hypertarget{class_eye_poke_handler_ab0828f7b5481ae0abec599b2cc06941e}\label{class_eye_poke_handler_ab0828f7b5481ae0abec599b2cc06941e}} 
+\index{EyePokeHandler@{EyePokeHandler}!mouthController@{mouthController}}
+\index{mouthController@{mouthController}!EyePokeHandler@{EyePokeHandler}}
+\doxysubsubsection{\texorpdfstring{mouthController}{mouthController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_mouth_controller}{Mouth\+Controller}} Eye\+Poke\+Handler.\+mouth\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_mouth_controller}{Mouth\+Controller}} object. 
+
+Instance of the custom \mbox{\hyperlink{class_mouth_controller}{Mouth\+Controller}} class. Handles mouth animations and transitions. 
+
+Definition at line 33 of file Eye\+Poke\+Handler.\+cs.
+
+
+
+Referenced by Start(), Stop\+Mouth\+Moving(), and Update().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_eye_poke_handler_8cs}{Eye\+Poke\+Handler.\+cs}}\end{DoxyCompactItemize}
