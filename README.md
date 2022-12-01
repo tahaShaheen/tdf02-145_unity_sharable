@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is the repository for arduino and hardware related matters for robot for Autism Spectrum Disorder therapy development funded through HEC TDF. The documentation folder contains all the code for Unity division of HEC funded project TDF 02-145. There are multiple files contained in this folder. This code will run on an Arduino Mega.
+This is the repository for Unity and face related matters for robot for Autism Spectrum Disorder therapy development funded through HEC TDF. The documentation folder contains all the code for Unity division of HEC funded project TDF 02-145. There are multiple files contained in this folder. This code will have to be exported as per instructions to run on an Android tablet.
 
 ## JAVA
 
